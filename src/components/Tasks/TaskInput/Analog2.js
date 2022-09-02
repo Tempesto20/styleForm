@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Button from "../../UI/Button/Button";
-import "./TaskInput.module.css";
+import styles from "./TaskInput.module.css";
 
 
 
@@ -33,7 +33,7 @@ const TaskInput = (props) => {
   return (
     
     <form onSubmit={formSubmitHandler}>
-      <div className={` form-control ${!isInputValid ? 'invalid' : '' }  ` }>  {/*наилучший вариант */}
+      <div className={` ${styles['form-control']}   ${!isInputValid && styles.invalid  }   `}>
         <label >Задачи</label>   {/*style={{color: !isInputValid ? ('red') : ('black')}*/} 
         <input 
         
@@ -45,13 +45,3 @@ const TaskInput = (props) => {
 };
 
 export default TaskInput;
-
-
-
-
-
-
-
-
-
-

@@ -1,11 +1,12 @@
-import "./Button.css";
-import styled from "styled-components";
+//import "./Button.css";
+//import styled from "styled-components";
+import styles from "./Button.module.css";
 
-
-//const Button = (props) => {
-
+const Button = (props) => {
+/*
   const Button = styled.button`
   
+    width: 100%;
     font: inherit;
     padding: 0.5rem 1.5rem;
     color: white;
@@ -15,7 +16,10 @@ import styled from "styled-components";
     box-shadow: 0 0 4px rgba(50, 50, 50, 0.25);
     cursor: pointer;
   
-  
+    @media(min-width: 700px){
+      width: auto;
+    }
+
  &:focus {
     outline: none;
   }
@@ -27,12 +31,13 @@ import styled from "styled-components";
   }
   
   `;
-/*
+  */
+
   return (
-    <button type={props.type} className="button">
+    <button type={props.type} className={styles.button}>
       {props.children}
     </button>
   );
 };
-*/
+
 export default Button;
